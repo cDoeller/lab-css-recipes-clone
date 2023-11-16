@@ -5,11 +5,22 @@ html {
   font-size: 16px;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
-body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
   margin: 0;
   padding: 0;
   font-weight: lighter;
@@ -22,3 +33,87 @@ body {
 
 /* STYLES */
 /* Write your CSS below */
+
+header {
+  background-image: url(/Week1/Thu_NOV16/lab-css-recipes-clone/apple-pie/images/apple-pie.jpg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 550px;
+}
+
+header h1 {
+  color: white;
+  font-size: 65px;
+  text-align: center;
+  padding-top: 230px;
+  font-weight: 300;
+}
+
+.container {
+  margin: 60px 80px 0px 80px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px ;
+}
+
+.container h2 {
+  font-size: 22px;
+}
+
+#introduction {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+#introduction p {
+  text-align:left;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+#introduction img {
+  width: 350px;
+  padding: 25px 0;
+}
+
+#ingedients {
+  margin-top: 40px;
+}
+
+#ingedients img {
+  width: 300px;
+  padding: 30px 0;
+  /* center image in DIV - no flexbox */
+  margin: auto;
+  display: block;
+}
+
+#ingedients ul {
+  padding: 25px 0 0 10px;
+  list-style-type: "- ";
+  list-style-position: inside;
+  line-height: 20px;
+}
+
+#directions {
+  margin-top: 40px;
+  margin-bottom: 80px;
+  border-bottom-style: none;
+}
+
+#directions ol {
+  line-height: 20px;
+  padding: 25px 0 0 10px;
+  list-style-position: inside;
+  /* ..found this on stack overflow.. */
+  list-style-type: none;
+  counter-reset: orderedList; 
+}
+
+/* ..found this on stack overflow.. */
+#directions ol li:before {
+  content: counter(orderedList) ") ";
+  counter-increment: orderedList;
+  }
